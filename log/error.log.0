@@ -1,0 +1,26 @@
+2015-12-06 20:01:34.826 [error] <0.266.0> gen_server <0.266.0> terminated with reason: bad argument in call to erlang:list_to_atom(undefined) in boss_router_controller:route/2 line 182
+2015-12-06 20:01:35.094 [error] <0.266.0> CRASH REPORT Process <0.266.0> with 0 neighbours exited with reason: bad argument in call to erlang:list_to_atom(undefined) in boss_router_controller:route/2 line 182 in gen_server:terminate/7 line 826
+2015-12-06 20:01:35.095 [error] <0.265.0> Supervisor {<0.265.0>,boss_router_sup} had child undefined started with boss_router_controller:start_link([{application,battleship},{controllers,["rahm_greeting_controller"]}]) at <0.266.0> exit with reason bad argument in call to erlang:list_to_atom(undefined) in boss_router_controller:route/2 line 182 in context child_terminated
+2015-12-06 20:01:35.331 [error] <0.283.0>@boss_web_controller_handle_request:handle_request:39 Unhandled Error: exit:{{badarg,
+          [{erlang,list_to_atom,[undefined],[]},
+           {boss_router_controller,route,2,
+               [{file,"src/boss/boss_router_controller.erl"},{line,182}]},
+           {boss_router_controller,handle_call,3,
+               [{file,"src/boss/boss_router_controller.erl"},{line,76}]},
+           {gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,629}]},
+           {gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,661}]},
+           {proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,240}]}]},
+      {gen_server,call,[<0.266.0>,{route,"/"}]}} Stacktrace: [{gen_server,call,2,[{file,"gen_server.erl"},{line,204}]},{boss_web_controller_handle_request,process_dynamic_request,5,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,250}]},{boss_web_controller_handle_request,process_request,5,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,242}]},{timer,tc,3,[{file,"timer.erl"},{line,197}]},{boss_web_controller_handle_request,build_dynamic_response,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,135}]},{boss_web_controller_handle_request,handle_request,2,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,35}]},{boss_simple_bridge_handler,run,1,[{file,"src/boss/boss_simple_bridge_handler.erl"},{line,26}]},{cowboy_simple_bridge_anchor,handle,2,[{file,"src/cowboy_bridge_modules/cowboy_simple_bridge_anchor.erl"},{line,34}]}]
+2015-12-06 20:02:24.747 [error] <0.285.0> gen_server <0.285.0> terminated with reason: bad argument in call to erlang:list_to_atom(undefined) in boss_router_controller:handle/2 line 157
+2015-12-06 20:02:24.748 [error] <0.285.0> CRASH REPORT Process <0.285.0> with 0 neighbours exited with reason: bad argument in call to erlang:list_to_atom(undefined) in boss_router_controller:handle/2 line 157 in gen_server:terminate/7 line 826
+2015-12-06 20:02:24.748 [error] <0.265.0> Supervisor {<0.265.0>,boss_router_sup} had child undefined started with boss_router_controller:start_link([{application,battleship},{controllers,["rahm_greeting_controller"]}]) at <0.285.0> exit with reason bad argument in call to erlang:list_to_atom(undefined) in boss_router_controller:handle/2 line 157 in context child_terminated
+2015-12-06 20:02:24.748 [error] <0.290.0>@boss_web_controller_handle_request:handle_request:39 Unhandled Error: exit:{{badarg,
+          [{erlang,list_to_atom,[undefined],[]},
+           {boss_router_controller,handle,2,
+               [{file,"src/boss/boss_router_controller.erl"},{line,157}]},
+           {boss_router_controller,handle_call,3,
+               [{file,"src/boss/boss_router_controller.erl"},{line,71}]},
+           {gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,629}]},
+           {gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,661}]},
+           {proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,240}]}]},
+      {gen_server,call,[<0.285.0>,{handle,404}]}} Stacktrace: [{gen_server,call,2,[{file,"gen_server.erl"},{line,204}]},{boss_web_controller_handle_request,process_not_found,5,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,282}]},{boss_web_controller_handle_request,process_dynamic_request,5,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,270}]},{boss_web_controller_handle_request,process_request,5,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,242}]},{timer,tc,3,[{file,"timer.erl"},{line,197}]},{boss_web_controller_handle_request,build_dynamic_response,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,135}]},{boss_web_controller_handle_request,handle_request,2,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,35}]},{boss_simple_bridge_handler,run,1,[{file,"src/boss/boss_simple_bridge_handler.erl"},{line,26}]}]
